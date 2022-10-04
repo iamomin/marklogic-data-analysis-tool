@@ -1,0 +1,69 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT clientContent (documentId,version,previousVersionId,nextVersionId,documentName,clientContentType,fileExtension,locations,userFirstName,userLastName,authorSpaceVersion,authorSpaceEnvironmentName,orderSetFolderPath,softDeleted,createdDateTime)>
+<!ATTLIST clientContent
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT documentId (#PCDATA)>
+<!ATTLIST documentId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT version (#PCDATA)>
+<!ATTLIST version
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT previousVersionId EMPTY>
+<!ATTLIST previousVersionId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT nextVersionId EMPTY>
+<!ATTLIST nextVersionId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT documentName (#PCDATA)>
+<!ATTLIST documentName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT clientContentType (#PCDATA)>
+<!ATTLIST clientContentType
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT fileExtension (#PCDATA)>
+<!ATTLIST fileExtension
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT locations (uri)>
+<!ATTLIST locations
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT userFirstName EMPTY>
+<!ATTLIST userFirstName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT userLastName EMPTY>
+<!ATTLIST userLastName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT authorSpaceVersion EMPTY>
+<!ATTLIST authorSpaceVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT authorSpaceEnvironmentName EMPTY>
+<!ATTLIST authorSpaceEnvironmentName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT orderSetFolderPath EMPTY>
+<!ATTLIST orderSetFolderPath
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT softDeleted (#PCDATA)>
+<!ATTLIST softDeleted
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT createdDateTime (#PCDATA)>
+<!ATTLIST createdDateTime
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT uri (#PCDATA)>
+<!ATTLIST uri
+    xmlns CDATA #FIXED ''>

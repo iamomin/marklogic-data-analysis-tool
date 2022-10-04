@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="assessment">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="id" type="xs:string" />
+                <xs:element name="name" type="xs:string" />
+                <xs:element name="documents">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="document" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="id" type="xs:string" />
+                                        <xs:element name="version" type="xs:integer" />
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="created">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element type="xs:short" name="userId" />
+                            <xs:element type="xs:dateTime" name="dateTime" />
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element type="xs:string" name="caresetting" />
+                <xs:element type="xs:string" name="status" />
+                <xs:element name="parentId" type="xs:string" minOccurs="0" />
+                <xs:element name="isRootFolder" type="xs:string" minOccurs="0" />
+                <xs:element name="checklistId" type="xs:string" minOccurs="0" />
+                <xs:element name="checklistVersion" type="xs:integer" minOccurs="0" />
+                <xs:element name="scopedInterventions" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="scopedIntervention" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                        <xs:element type="xs:string" name="id" />
+                                        <xs:element type="xs:string" name="assessability" minOccurs="0" />
+                                        <xs:element type="xs:string" name="matchable" minOccurs="0" />
+                                        <xs:element type="xs:string" name="matchableFromSIConfiguration" minOccurs="0" />
+                                        <xs:element type="xs:string" name="careSettingContainsOutpatient" minOccurs="0" />
+                                        <xs:element name="matches" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="segment" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:all>
+                                                                <xs:element type="xs:string" name="id" />
+                                                                <xs:element type="xs:string" name="text" minOccurs="0" />
+                                                                <xs:element type="xs:string" name="type" minOccurs="0" />
+                                                                <xs:element type="xs:string" name="negated" minOccurs="0" />
+                                                                <xs:element type="xs:string" name="durianMatch" minOccurs="0" />
+                                                                <xs:element type="xs:string" name="decisionTrace" minOccurs="0" />
+                                                            </xs:all>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="ignore" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="xs:string" name="ignored" />
+                                                    <xs:element type="xs:integer" name="userId" minOccurs="0" />
+                                                    <xs:element type="xs:dateTime" name="dateTime" />
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="override" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="xs:string" name="value" />
+                                                    <xs:element type="xs:integer" name="userId" />
+                                                    <xs:element type="xs:dateTime" name="dateTime" />
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="note" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="xs:string" name="value" />
+                                                    <xs:element type="xs:integer" name="userId" />
+                                                    <xs:element type="xs:dateTime" name="dateTime" />
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="flag" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element type="xs:string" name="value" />
+                                                    <xs:element type="xs:short" name="userId" />
+                                                    <xs:element type="xs:dateTime" name="dateTime" />
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="generalComments" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="generalComment" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType mixed="true">
+                                    <xs:all>
+                                        <xs:element type="xs:string" name="id" />
+                                        <xs:element type="xs:string" name="value" />
+                                        <xs:element type="xs:short" name="userId" />
+                                        <xs:element name="created">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:short" name="userId" />
+                                                    <xs:element type="xs:dateTime" name="dateTime" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="votes" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="vote" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:all>
+                                                                <xs:element type="xs:short" name="userId" />
+                                                                <xs:element type="xs:string" name="value" />
+                                                                <xs:element type="xs:dateTime" name="createdDate" />
+                                                            </xs:all>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="completedBy" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element type="xs:integer" name="userId" />
+                            <xs:element type="xs:dateTime" name="dateTime" />
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="assessedBy" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element type="xs:integer" name="userId" />
+                            <xs:element type="xs:dateTime" name="dateTime" />
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="statusUpdatedBy" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element type="xs:integer" name="userId" />
+                            <xs:element type="xs:dateTime" name="dateTime" />
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="reviewedBy" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element type="xs:integer" name="userId" />
+                            <xs:element type="xs:dateTime" name="dateTime" />
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="modifiedBy" minOccurs="0">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element type="xs:integer" name="userId" />
+                            <xs:element type="xs:dateTime" name="dateTime" />
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="tags" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="tagId" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="assign" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="reviewers" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:integer" name="id" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="segments" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="segment" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element type="xs:string" name="segmentId"/>
+                                        <xs:element name="comments" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="comment" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:all>
+                                                                <xs:element type="xs:string" name="id"/>
+                                                                <xs:element type="xs:string" name="value"/>
+                                                                <xs:element type="xs:string" name="type"/>
+                                                                <xs:element name="created">
+                                                                    <xs:complexType>
+                                                                        <xs:all>
+                                                                            <xs:element type="xs:short" name="userId"/>
+                                                                            <xs:element type="xs:dateTime" name="dateTime"/>
+                                                                        </xs:all>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="votes" minOccurs="0">
+                                                                    <xs:complexType mixed="true">
+                                                                        <xs:sequence>
+                                                                            <xs:element name="vote" maxOccurs="unbounded" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:all>
+                                                                                        <xs:element type="xs:short" name="userId"/>
+                                                                                        <xs:element type="xs:string" name="value"/>
+                                                                                        <xs:element type="xs:dateTime" name="createdDate"/>
+                                                                                    </xs:all>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:all>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element type="xs:string" name="originalSegmentText"/>
+                                        <xs:element name="suggestions" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="suggestion" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                                                <xs:element type="xs:string" name="id"/>
+                                                                <xs:element type="xs:string" name="segmentText"/>
+                                                                <xs:element type="xs:string" name="oldSegmentText"/>
+                                                                <xs:element type="xs:string" name="segmentLocation"/>
+                                                                <xs:element type="xs:string" name="reason"/>
+                                                                <xs:element type="xs:string" name="type"/>
+                                                                <xs:element name="created">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:integer" name="userId"/>
+                                                                            <xs:element type="xs:dateTime" name="dateTime"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="modified">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:integer" name="userId"/>
+                                                                            <xs:element type="xs:dateTime" name="dateTime"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="resolveInfo">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element type="xs:string" name="reason"/>
+                                                                            <xs:element type="xs:string" name="type"/>
+                                                                            <xs:element name="created">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:integer" name="userId"/>
+                                                                                        <xs:element type="xs:dateTime" name="dateTime"/>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="votes">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="vote" maxOccurs="unbounded" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:integer" name="userId"/>
+                                                                                        <xs:element type="xs:string" name="value"/>
+                                                                                        <xs:element type="xs:dateTime" name="createdDate"/>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="comments">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="comment">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:string" name="id"/>
+                                                                                        <xs:element type="xs:string" name="value"/>
+                                                                                        <xs:element name="created">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element type="xs:integer" name="userId"/>
+                                                                                                    <xs:element type="xs:dateTime" name="dateTime"/>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element type="xs:string" name="votes"/>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:choice>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

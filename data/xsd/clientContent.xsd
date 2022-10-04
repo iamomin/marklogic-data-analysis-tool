@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="clientContent">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="1">
+        <xs:element ref="documentId"/>
+        <xs:element ref="version"/>
+        <xs:element ref="documentName"/>
+        <xs:element ref="clientContentType"/>
+        <xs:element ref="fileExtension"/>
+        <xs:element ref="locations"/>
+        <xs:element ref="previousVersionId" minOccurs="0"/>
+        <xs:element ref="nextVersionId" minOccurs="0"/>
+        <xs:element minOccurs="0" name="userFirstName" type="xs:string"/>
+        <xs:element minOccurs="0" name="userLastName" type="xs:string"/>
+        <xs:element ref="authorSpaceVersion" minOccurs="0"/>
+        <xs:element ref="authorSpaceOrderSetId" minOccurs="0"/>
+        <xs:element ref="authorSpaceEnvironmentId" minOccurs="0"/>
+        <xs:element ref="authorSpaceEnvironmentName" minOccurs="0"/>
+        <xs:element ref="orderSetFolderPath" minOccurs="0"/>
+        <xs:element ref="softDeleted" minOccurs="0"/>
+        <xs:element ref="parentId" minOccurs="0"/>
+        <xs:element ref="fileName" minOccurs="0"/>
+        <xs:element ref="isRootFolder" minOccurs="0"/>
+        <xs:element ref="tags" minOccurs="0"/>
+        <xs:element ref="createdDateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="documentId" type="xs:string"/>
+  <xs:element name="version" type="xs:integer"/>
+  <xs:element name="previousVersionId">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="nextVersionId">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="documentName" type="xs:string"/>
+  <xs:element name="clientContentType" type="xs:NCName"/>
+  <xs:element name="fileExtension" type="xs:NCName"/>
+  <xs:element name="locations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="uri"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="uri" type="xs:string"/>
+  <xs:element name="userFirstName">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="userLastName">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="authorSpaceVersion">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="authorSpaceEnvironmentName">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="authorSpaceEnvironmentId">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="authorSpaceOrderSetId">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="orderSetFolderPath">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="tags">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="softDeleted" type="xs:boolean"/>
+  <xs:element name="parentId" type="xs:string"/>
+  <xs:element name="fileName" type="xs:string"/>
+  <xs:element name="isRootFolder" type="xs:boolean"/>
+  <xs:element name="createdDateTime" type="xs:NMTOKEN"/>
+</xs:schema>

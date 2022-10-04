@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iec xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="iec.xsd">
+   <id>18d3bfc6-213b-428f-ab85-5358a446a34c</id>
+   <inclusionCriteria>tsh, thyroid stimulating hormone, thyrotropin, TFT, thyroid function test, thyroid panel, thyroid profile</inclusionCriteria>
+   <drugClass>n/a</drugClass>
+   <status>released</status>
+   <testNotes>2016-7-22 JP: duplicate</testNotes>
+   <pharmReview>n/a</pharmReview>
+   <comments>2018-1-29 JP: modified IC to include panel and profile
+2016-7-22 JP: new SI, duplicate IEC</comments>
+   <scopedIntervention>
+      <id>8b10fe60-5822-48c7-9b34-bc220f1f5f02</id>
+   </scopedIntervention>
+</iec>

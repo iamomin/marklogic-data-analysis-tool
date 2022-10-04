@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="assessment">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id" minOccurs="1"/>
+        <xs:element ref="name"/>
+		<xs:element ref="parentId" minOccurs="0"/>
+        <xs:element ref="documents"/>
+        <xs:element ref="checklistId"/>
+        <xs:element ref="checklistVersion"/>
+        <xs:element ref="created"/>
+        <xs:element ref="caresetting"/>
+        <xs:element ref="status"/>
+		<xs:element ref="completedBy" minOccurs="0"/>
+		<xs:element ref="assessedBy" minOccurs="0"/>
+		<xs:element ref="statusUpdatedBy" minOccurs="0"/>
+		<xs:element ref="reviewedBy" minOccurs="0"/>
+		<xs:element ref="modifiedBy" minOccurs="0"/>
+        <xs:element ref="scopedInterventions"/>
+        <xs:element ref="segments"/>
+		<xs:element ref="generalComments"/>
+		<xs:element ref="assign"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="parentId">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="documents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="document"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="version"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="version" type="xs:integer"/>
+  <xs:element name="checklistId" type="xs:string"/>
+  <xs:element name="checklistVersion" type="xs:integer"/>
+  <xs:element name="created">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="caresetting" type="xs:NCName"/>
+  <xs:element name="status" type="xs:NCName"/>
+  <xs:element name="completedBy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="assessedBy">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="statusUpdatedBy">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reviewedBy">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scopedInterventions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="scopedIntervention"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scopedIntervention">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+		<xs:element ref="matchable"/>
+        <xs:element ref="matches"/>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="note"/>
+          <xs:element ref="override"/>
+        </xs:choice>
+		<xs:element ref="ignore"/>
+        <xs:element ref="matchableFromSIConfiguration"/>
+        <xs:element ref="careSettingContainsOutpatient"/>
+        <xs:element ref="assessability"/>
+        <xs:element minOccurs="0" ref="flag"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="matches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="segment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="note">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="value"/>
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="override">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="value"/>
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="modifiedBy">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="segment">
+    <xs:complexType>
+	<xs:choice maxOccurs="unbounded" minOccurs="0">
+	<xs:element ref="segmentId" minOccurs="0"/>
+	<xs:element ref="originalSegmentText" minOccurs="0"/>
+	<xs:sequence minOccurs="0">
+        <xs:element ref="id" minOccurs="0"/>
+        <xs:element ref="text" minOccurs="0"/>
+        <xs:element minOccurs="0" ref="negated"/>
+        <xs:element ref="durianMatch" minOccurs="0"/>
+		<xs:element ref="type" minOccurs="0"/>
+      </xs:sequence>
+	  <xs:sequence>
+          <xs:element ref="suggestions" minOccurs="0"/>
+      </xs:sequence>
+	</xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="text" type="xs:string"/>
+  <xs:element name="segmentId" type="xs:string"/>
+  <xs:element name="originalSegmentText" type="xs:string"/>
+  <xs:element name="suggestions">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="suggestion"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="suggestion">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="segmentText"/>
+        <xs:element ref="oldSegmentText"/>
+        <xs:element ref="segmentLocation"/>
+        <xs:element ref="reason"/>
+        <xs:element ref="type"/>
+        <xs:element ref="created"/>
+        <xs:element ref="modified"/>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element ref="votes"/>
+          <xs:element ref="comments"/>
+          <xs:element ref="resolveInfo"/>
+        </xs:choice>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="negated" type="xs:boolean"/>
+  <xs:element name="durianMatch" type="xs:string"/>
+  <xs:element name="assessability" type="xs:NCName"/>
+  <xs:element name="ignore">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="ignored"/>
+        <xs:element minOccurs="0" ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ignored" type="xs:boolean"/>
+  <xs:element name="matchableFromSIConfiguration" type="xs:boolean"/>
+  <xs:element name="careSettingContainsOutpatient" type="xs:boolean"/>
+  <xs:element name="matchable" type="xs:NCName"/>
+  <xs:element name="segmentText" type="xs:string"/>
+  <xs:element name="oldSegmentText" type="xs:string"/>
+  <xs:element name="segmentLocation" type="xs:string"/>
+  <xs:element name="votes">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="vote"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="vote">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="userId"/>
+        <xs:element ref="value"/>
+        <xs:element ref="createdDate"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createdDate" type="xs:NMTOKEN"/>
+  <xs:element name="modified">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="comments">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="comment"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resolveInfo">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="reason"/>
+        <xs:element ref="type"/>
+        <xs:element ref="created"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="comment">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="value"/>
+        <xs:element ref="created"/>
+        <xs:element ref="votes"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="flag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="value"/>
+        <xs:element ref="userId"/>
+        <xs:element ref="dateTime"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="value" type="xs:string"/>
+  <xs:element name="segments">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="generalComments">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" ref="generalComment"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generalComment">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="value"/>
+        <xs:element ref="userId"/>
+        <xs:element ref="created"/>
+        <xs:element ref="votes"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="assign">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="reviewers"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reviewers">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="userId" type="xs:integer"/>
+  <xs:element name="dateTime" type="xs:NMTOKEN"/>
+  <xs:element name="type" type="xs:NCName"/>
+  <xs:element name="reason" type="xs:string"/>
+</xs:schema>

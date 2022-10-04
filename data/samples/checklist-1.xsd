@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="checklist">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="lastSignificantVersion"/>
+                <xs:element ref="evidencesType"/>
+                <xs:element ref="id"/>
+                <xs:element ref="status"/>
+                <xs:element ref="name"/>
+                <xs:element ref="groups"/>
+                <xs:element ref="filters"/>
+                <xs:element ref="inactive"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="lastSignificantVersion" type="xs:integer"/>
+    <xs:element name="evidencesType">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="includeOutcomes"/>
+                <xs:element ref="includePerformanceMeasures"/>
+                <xs:element ref="includeGuidelines"/>
+                <xs:element ref="includeEvidence"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="includeOutcomes" type="xs:boolean"/>
+    <xs:element name="includePerformanceMeasures" type="xs:boolean"/>
+    <xs:element name="includeGuidelines" type="xs:boolean"/>
+    <xs:element name="includeEvidence" type="xs:boolean"/>
+    <xs:element name="status" type="xs:NCName"/>
+    <xs:element name="groups">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="group"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="group">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="scopedInterventions"/>
+                <xs:element ref="groupTerm"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="scopedInterventions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="scopedIntervention"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="scopedIntervention">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"/>
+                <xs:element ref="version"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="version">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="version-id"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="version-id" type="xs:integer"/>
+    <xs:element name="groupTerm">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name"/>
+                <xs:element ref="id"/>
+                <xs:element ref="dtsNamespaceId"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="filters">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="filter"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="filter">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="values"/>
+                <xs:element ref="target"/>
+                <xs:element ref="type"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="values">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="value"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="value">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"/>
+                <xs:element ref="dtsNamespaceId"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="target" type="xs:NCName"/>
+    <xs:element name="type" type="xs:NCName"/>
+    <xs:element name="inactive" type="xs:boolean"/>
+    <xs:element name="id" type="xs:string"/>
+    <xs:element name="name" type="xs:string"/>
+    <xs:element name="dtsNamespaceId" type="xs:integer"/>
+</xs:schema>

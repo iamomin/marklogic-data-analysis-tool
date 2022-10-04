@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<performanceMeasure xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="performanceMeasure.xsd">
+  <id>12a87fe9-0ee7-4f60-badc-82817b8824fa</id>
+  <performanceMeasureName>CMS National Hospital Inpatient Quality Measure</performanceMeasureName>
+  <legacyId>25</legacyId>
+  <database>eris</database>
+  <table>quality_measures</table>
+  <keyField>qmeasureid</keyField>
+  <status>active</status>
+  <abbreviation>CMS NHQM</abbreviation>
+</performanceMeasure>

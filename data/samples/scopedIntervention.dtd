@@ -1,0 +1,249 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT scopedIntervention (id,scopedInterventionName,description,intervention,status,careSettings,assessmentGuidance,scoringGuidance,conditions,sexes,ageGroups,evidence,customEvidence,performanceMeasures,guidelines,outcomes,section,clinicalCategories,hasForecasters,isScoreable,subpopulationCollection,collaborationNotes,inpatientVenues,outpatientVenues,stakeholders,formats,channels,patientProblems,inactive,clientMatchingInstructions,shouldShowInAnalysis,inclusionCriteria,exclusionCriteria,scopedInterventionTypes,interventionAction,matchingCategory)>
+<!ATTLIST scopedIntervention
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedInterventionName (#PCDATA)>
+<!ATTLIST scopedInterventionName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT intervention (id,displayName,dtsNamespaceId)>
+<!ATTLIST intervention
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT status (#PCDATA)>
+<!ATTLIST status
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT careSettings (careSetting)>
+<!ATTLIST careSettings
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT assessmentGuidance (#PCDATA)>
+<!ATTLIST assessmentGuidance
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scoringGuidance (#PCDATA)>
+<!ATTLIST scoringGuidance
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT conditions (condition)>
+<!ATTLIST conditions
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT sexes (sex)>
+<!ATTLIST sexes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT ageGroups (ageGroup)>
+<!ATTLIST ageGroups
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT evidence (evidenceTopic)+>
+<!ATTLIST evidence
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT customEvidence EMPTY>
+<!ATTLIST customEvidence
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT performanceMeasures EMPTY>
+<!ATTLIST performanceMeasures
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT guidelines (guideline)+>
+<!ATTLIST guidelines
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT outcomes (outcomeContainer)+>
+<!ATTLIST outcomes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT section (id,dtsNamespaceId,displayName)>
+<!ATTLIST section
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT clinicalCategories (clinicalCategory)>
+<!ATTLIST clinicalCategories
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT hasForecasters (#PCDATA)>
+<!ATTLIST hasForecasters
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT isScoreable (#PCDATA)>
+<!ATTLIST isScoreable
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT subpopulationCollection EMPTY>
+<!ATTLIST subpopulationCollection
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT collaborationNotes (#PCDATA)>
+<!ATTLIST collaborationNotes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT inpatientVenues EMPTY>
+<!ATTLIST inpatientVenues
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT outpatientVenues EMPTY>
+<!ATTLIST outpatientVenues
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT stakeholders EMPTY>
+<!ATTLIST stakeholders
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT formats (format)>
+<!ATTLIST formats
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT channels EMPTY>
+<!ATTLIST channels
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT patientProblems EMPTY>
+<!ATTLIST patientProblems
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT inactive (#PCDATA)>
+<!ATTLIST inactive
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT clientMatchingInstructions (#PCDATA)>
+<!ATTLIST clientMatchingInstructions
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT shouldShowInAnalysis (#PCDATA)>
+<!ATTLIST shouldShowInAnalysis
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT inclusionCriteria (#PCDATA)>
+<!ATTLIST inclusionCriteria
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT exclusionCriteria (#PCDATA)>
+<!ATTLIST exclusionCriteria
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedInterventionTypes (scopedInterventionType)>
+<!ATTLIST scopedInterventionTypes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT interventionAction (id,displayName,dtsNamespaceId)>
+<!ATTLIST interventionAction
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT matchingCategory (id,displayName,dtsNamespaceId)>
+<!ATTLIST matchingCategory
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT careSetting (id,dtsNamespaceId,displayName)>
+<!ATTLIST careSetting
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT condition (id,dtsNamespaceId,displayName)>
+<!ATTLIST condition
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT sex (id,displayName)>
+<!ATTLIST sex
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT ageGroup (id,dtsNamespaceId,displayName)>
+<!ATTLIST ageGroup
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT evidenceTopic (displayName,pageId,product)>
+<!ATTLIST evidenceTopic
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT guideline (guidelineName,id,title,publishYear,legacyId)>
+<!ATTLIST guideline
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT outcomeContainer (outcome,impact,impactThresholds)>
+<!ATTLIST outcomeContainer
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT clinicalCategory (id,dtsNamespaceId,displayName)>
+<!ATTLIST clinicalCategory
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT format (id,dtsNamespaceId,displayName)>
+<!ATTLIST format
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedInterventionType (id,displayName)>
+<!ATTLIST scopedInterventionType
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT pageId (#PCDATA)>
+<!ATTLIST pageId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT product (id,displayName)>
+<!ATTLIST product
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT guidelineName (#PCDATA)>
+<!ATTLIST guidelineName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT publishYear (#PCDATA)>
+<!ATTLIST publishYear
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT legacyId (#PCDATA)>
+<!ATTLIST legacyId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT outcome (id,dtsNamespaceId,displayName)>
+<!ATTLIST outcome
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT impact (#PCDATA)>
+<!ATTLIST impact
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT impactThresholds (impactThreshold)>
+<!ATTLIST impactThresholds
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT impactThreshold (value,description,referenceId,pubMedId)>
+<!ATTLIST impactThreshold
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT referenceId (#PCDATA)>
+<!ATTLIST referenceId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT pubMedId (#PCDATA)>
+<!ATTLIST pubMedId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT displayName (#PCDATA)>
+<!ATTLIST displayName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT dtsNamespaceId (#PCDATA)>
+<!ATTLIST dtsNamespaceId
+    xmlns CDATA #FIXED ''>

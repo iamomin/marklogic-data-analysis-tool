@@ -1,0 +1,81 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT assessment (id,name,parentId,documents,checklistId,checklistVersion,created,caresetting,status,scopedInterventions)>
+<!ATTLIST assessment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT parentId EMPTY>
+<!ATTLIST parentId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT documents (document)>
+<!ATTLIST documents
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT checklistId (#PCDATA)>
+<!ATTLIST checklistId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT checklistVersion (#PCDATA)>
+<!ATTLIST checklistVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT created (userId,dateTime)>
+<!ATTLIST created
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT caresetting (#PCDATA)>
+<!ATTLIST caresetting
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT status (#PCDATA)>
+<!ATTLIST status
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedInterventions (scopedIntervention)+>
+<!ATTLIST scopedInterventions
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT document (id,version)>
+<!ATTLIST document
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT userId (#PCDATA)>
+<!ATTLIST userId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT dateTime (#PCDATA)>
+<!ATTLIST dateTime
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedIntervention (id,matches)>
+<!ATTLIST scopedIntervention
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT version (#PCDATA)>
+<!ATTLIST version
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT matches (segment)*>
+<!ATTLIST matches
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT segment (id,text,durianMatch)>
+<!ATTLIST segment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT text (#PCDATA)>
+<!ATTLIST text
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT durianMatch (#PCDATA)>
+<!ATTLIST durianMatch
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+    xmlns CDATA #FIXED ''>

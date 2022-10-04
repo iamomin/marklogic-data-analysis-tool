@@ -1,0 +1,243 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT assessment (id,name,parentId?,documents,checklistId?,checklistVersion?,created,caresetting,status,completedBy?,assessedBy?,statusUpdatedBy?,reviewedBy?,scopedInterventions?,modifiedBy?,segments?,generalComments?,assign?)>
+<!ATTLIST assessment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT parentId (#PCDATA)>
+<!ATTLIST parentId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT documents (document)>
+<!ATTLIST documents
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT checklistId (#PCDATA)>
+<!ATTLIST checklistId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT checklistVersion (#PCDATA)>
+<!ATTLIST checklistVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT caresetting (#PCDATA)>
+<!ATTLIST caresetting
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT status (#PCDATA)>
+<!ATTLIST status
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT completedBy (userId,dateTime)>
+<!ATTLIST completedBy
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT assessedBy (userId,dateTime)>
+<!ATTLIST assessedBy
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT statusUpdatedBy (userId,dateTime)>
+<!ATTLIST statusUpdatedBy
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT reviewedBy (userId,dateTime)>
+<!ATTLIST reviewedBy
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedInterventions (scopedIntervention+)>
+<!ATTLIST scopedInterventions
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT modifiedBy (userId,dateTime)>
+<!ATTLIST modifiedBy
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT segments (segment*)>
+<!ATTLIST segments
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT generalComments (generalComment)+>
+<!ATTLIST generalComments
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT assign (reviewers)>
+<!ATTLIST assign
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT document (id,version)>
+<!ATTLIST document
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedIntervention (
+    (id,assessability?,ignore?,matchableFromSIConfiguration?,careSettingContainsOutpatient?,matchable?,flag?,matches?,(note|override)*) |
+    (id,matches?,assessability?,ignore?,matchableFromSIConfiguration?,careSettingContainsOutpatient?,matchable?,flag?,(note|override)*) |
+    (id,assessability?,matchable?,ignore?,matches?,matchableFromSIConfiguration?,careSettingContainsOutpatient?,flag?,(note|override)*)
+)?>
+
+<!ATTLIST scopedIntervention
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT generalComment (id,value,userId,created,votes)>
+<!ATTLIST generalComment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT reviewers (id)>
+<!ATTLIST reviewers
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT version (#PCDATA)>
+<!ATTLIST version
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT assessability (#PCDATA)>
+<!ATTLIST assessability
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT ignore (ignored,userId?,dateTime)>
+<!ATTLIST ignore
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT matchableFromSIConfiguration (#PCDATA)>
+<!ATTLIST matchableFromSIConfiguration
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT careSettingContainsOutpatient (#PCDATA)>
+<!ATTLIST careSettingContainsOutpatient
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT matchable (#PCDATA)>
+<!ATTLIST matchable
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT flag (value,userId,dateTime)>
+<!ATTLIST flag
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT matches (segment)*>
+<!ATTLIST matches
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT note (value,userId,dateTime)>
+<!ATTLIST note
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT override (value,userId,dateTime)>
+<!ATTLIST override
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT ignored (#PCDATA)>
+<!ATTLIST ignored
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT created (userId,dateTime)>
+<!ATTLIST created
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT userId (#PCDATA)>
+<!ATTLIST userId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT dateTime (#PCDATA)>
+<!ATTLIST dateTime
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT segment (
+    (id,text,negated?,type?,durianMatch?,decisionTrace?)|
+    (id,text,decisionTrace?,negated?,type?,durianMatch?)|
+    (segmentId,originalSegmentText,suggestions)
+)?>
+
+<!ATTLIST segment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT text (#PCDATA)>
+<!ATTLIST text
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT negated (#PCDATA)>
+<!ATTLIST negated
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT durianMatch (#PCDATA)>
+<!ATTLIST durianMatch
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT decisionTrace (#PCDATA)>
+<!ATTLIST decisionTrace
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT segmentId (#PCDATA)>
+<!ATTLIST segmentId
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT originalSegmentText (#PCDATA)>
+<!ATTLIST originalSegmentText
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT suggestions (suggestion)>
+<!ATTLIST suggestions
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT suggestion (id,segmentText,oldSegmentText,segmentLocation,reason,type,created,modified,(votes|comments|resolveInfo)+)?>
+<!ATTLIST suggestion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT segmentText (#PCDATA)>
+<!ATTLIST segmentText
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT oldSegmentText (#PCDATA)>
+<!ATTLIST oldSegmentText
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT segmentLocation (#PCDATA)>
+<!ATTLIST segmentLocation
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT modified (userId,dateTime)>
+<!ATTLIST modified
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT comments (comment)>
+<!ATTLIST comments
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT resolveInfo (reason,type,created)>
+<!ATTLIST resolveInfo
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT comment (id,value,created,votes)>
+<!ATTLIST comment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT value (#PCDATA)>
+<!ATTLIST value
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT votes (vote)*>
+<!ATTLIST votes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT vote (userId,value,createdDate)>
+<!ATTLIST vote
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT createdDate (#PCDATA)>
+<!ATTLIST createdDate
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT type (#PCDATA)>
+<!ATTLIST type
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT reason (#PCDATA)>
+<!ATTLIST reason
+    xmlns CDATA #FIXED ''>

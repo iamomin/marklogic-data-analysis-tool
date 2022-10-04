@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="iec">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="3">
+        <xs:element name="comments" type="xs:string" minOccurs="0"/>
+        <xs:element name="scopedIntervention">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="status" type="xs:string" />
+        <xs:element name="inclusionCriteria" type="xs:string" minOccurs="0"/>
+        <xs:element name="exclusionCriteria" type="xs:string" minOccurs="0"/>
+        <xs:element name="drugClass" minOccurs="0"/>
+        <xs:element name="testNotes" minOccurs="0"/>
+        <xs:element name="pharmReview" minOccurs="0"/>
+        <xs:element name="id" type="xs:string" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

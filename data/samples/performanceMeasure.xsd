@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="performanceMeasure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="performanceMeasureName"/>
+        <xs:element ref="legacyId"/>
+        <xs:element ref="database"/>
+        <xs:element ref="table"/>
+        <xs:element ref="keyField"/>
+        <xs:element ref="status"/>
+        <xs:element ref="abbreviation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="performanceMeasureName" type="xs:string"/>
+  <xs:element name="legacyId" type="xs:integer"/>
+  <xs:element name="database" type="xs:NCName"/>
+  <xs:element name="table" type="xs:NCName"/>
+  <xs:element name="keyField" type="xs:NCName"/>
+  <xs:element name="status" type="xs:NCName"/>
+  <xs:element name="abbreviation" type="xs:string"/>
+</xs:schema>

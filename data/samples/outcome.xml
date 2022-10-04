@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outcome xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="outcome.xsd">
+   <id>b81dfa36-4eaa-4b69-bf27-3f25d5bb8d91</id>
+   <outcomeName>Recurrent Myocardial Infarction</outcomeName>
+   <applicability>Population Specific</applicability>
+   <direction>Decrease</direction>
+</outcome>

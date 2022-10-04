@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="scopedIntervention">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="matchingCategory"/>
+        <xs:element ref="interventionAction"/>
+        <xs:element ref="composite"/>
+        <xs:element ref="descriptionRequired"/>
+        <xs:element ref="clientInstructionsRequired"/>
+        <xs:element ref="scopedInterventionName"/>
+        <xs:element ref="description"/>
+        <xs:element ref="intervention"/>
+        <xs:element ref="status"/>
+        <xs:element ref="careSettings"/>
+        <xs:element ref="assessmentGuidance"/>
+        <xs:element ref="scoringGuidance"/>
+        <xs:element ref="conditions"/>
+        <xs:element ref="sexes"/>
+        <xs:element ref="ageGroups"/>
+        <xs:element ref="evidence"/>
+        <xs:element ref="customEvidence"/>
+        <xs:element ref="performanceMeasures"/>
+        <xs:element ref="guidelines"/>
+        <xs:element ref="outcomes"/>
+        <xs:element ref="section"/>
+        <xs:element ref="clinicalCategories"/>
+        <xs:element ref="hasForecasters"/>
+        <xs:element ref="isScoreable"/>
+        <xs:element ref="subpopulationCollection"/>
+        <xs:element ref="collaborationNotes"/>
+        <xs:element ref="inpatientVenues"/>
+        <xs:element ref="outpatientVenues"/>
+        <xs:element ref="stakeholders"/>
+        <xs:element ref="formats"/>
+        <xs:element ref="channels"/>
+        <xs:element ref="patientProblems"/>
+        <xs:element ref="inactive"/>
+        <xs:element ref="clientMatchingInstructions"/>
+        <xs:element ref="shouldShowInAnalysis"/>
+        <xs:element ref="inclusionCriteria"/>
+		<xs:element ref="problems" minOccurs="0"/>
+        <xs:element ref="exclusionCriteria"/>
+        <xs:element ref="scopedInterventionTypes"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="matchingCategory">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="displayName"/>
+        <xs:element ref="dtsNamespaceId"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interventionAction">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="displayName"/>
+        <xs:element ref="dtsNamespaceId"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="composite" type="xs:string" />
+  <xs:element name="descriptionRequired" type="xs:string"/>
+  <xs:element name="clientInstructionsRequired" type="xs:string" />
+  <xs:element name="scopedInterventionName" type="xs:string"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="intervention">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="displayName"/>
+        <xs:element ref="dtsNamespaceId"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="status" type="xs:NCName"/>
+  <xs:element name="careSettings">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="careSetting"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="careSetting">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="assessmentGuidance" type="xs:string"/>
+  <xs:element name="scoringGuidance" type="xs:string"/>
+  <xs:element name="conditions">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="condition"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="condition">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sexes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="sex"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="displayName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ageGroups">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="ageGroup"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ageGroup">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="evidence">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" ref="evidenceTopic"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="evidenceTopic">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="displayName"/>
+        <xs:element ref="pageId"/>
+        <xs:element ref="product"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pageId" type="xs:integer"/>
+  <xs:element name="product">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="id" minOccurs="0"/>
+        <xs:element ref="displayName" minOccurs="0"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customEvidence">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="customEvidenceTopic"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customEvidenceTopic">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="pageUrl"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="pageUrl" type="xs:anyURI"/>
+  <xs:element name="performanceMeasures">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" ref="performanceMeasure"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="performanceMeasure">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="displayName"/>
+        <xs:element ref="id"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guidelines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="guideline"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guideline">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="guidelineName"/>
+        <xs:element ref="id"/>
+        <xs:element ref="title"/>
+        <xs:element ref="publishYear"/>
+        <xs:element ref="legacyId"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="guidelineName" type="xs:string"/>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="publishYear" type="xs:integer"/>
+  <xs:element name="legacyId" type="xs:integer"/>
+  <xs:element name="outcomes">
+  <xs:complexType>
+  <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="outcomeContainer"/>
+      </xs:choice>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="outcomeContainer">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="outcome"/>
+        <xs:element ref="impact"/>
+        <xs:element ref="impactThresholds"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+<xs:element name="outcome">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="impact" type="xs:NCName"/>
+  <xs:element name="impactThresholds">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="section">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clinicalCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="clinicalCategory"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="clinicalCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hasForecasters" type="xs:boolean"/>
+  <xs:element name="isScoreable" type="xs:boolean"/>
+  <xs:element name="subpopulationCollection">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" ref="subpopulation"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subpopulation">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+	   <xs:element minOccurs="0" ref="clinicalActionRequired"/>
+        <xs:element ref="clinicalAction"/>
+        <xs:element ref="name"/>
+        <xs:element minOccurs="0" ref="subpopulationRequired"/>
+        <xs:element ref="target"/>
+        <xs:element minOccurs="0" ref="targetRequired"/>
+        <xs:element ref="timing"/>
+        <xs:element ref="timingRequired"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="clinicalActionRequired" type="xs:boolean"/>
+  <xs:element name="clinicalAction" type="xs:string"/>
+  <xs:element name="subpopulationRequired" type="xs:string" />
+  <xs:element name="target">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="targetRequired" type="xs:string" />
+  <xs:element name="timing" type="xs:string" />
+  <xs:element name="timingRequired" type="xs:string" />
+  <xs:element name="patientProblems">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="patientProblem"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="patientProblem">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="collaborationNotes" type="xs:string"/>
+  <xs:element name="inpatientVenues">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="outpatientVenues">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="stakeholders">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="formats">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element maxOccurs="unbounded" ref="format"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="format">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="dtsNamespaceId"/>
+        <xs:element ref="displayName"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="channels">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="inactive" type="xs:boolean"/>
+  <xs:element name="clientMatchingInstructions" type="xs:string"/>
+  <xs:element name="shouldShowInAnalysis" type="xs:boolean"/>
+  <xs:element name="inclusionCriteria" type="xs:string"/>
+  <xs:element name="exclusionCriteria" type="xs:string"/>
+  <xs:element name="scopedInterventionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="scopedInterventionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="scopedInterventionType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="displayName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="problems">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="displayName" type="xs:string"/>
+  <xs:element name="dtsNamespaceId" type="xs:integer"/>
+</xs:schema>

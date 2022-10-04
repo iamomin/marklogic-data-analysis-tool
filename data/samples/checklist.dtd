@@ -1,0 +1,120 @@
+<?xml encoding="utf-8"?>
+
+<!ELEMENT checklist (lastSignificantVersion,evidencesType,id,scopeStatement,status,name,notes,updateFlag,groups,filters)>
+<!ATTLIST checklist
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT lastSignificantVersion (#PCDATA)>
+<!ATTLIST lastSignificantVersion
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT evidencesType (includeOutcomes,includePerformanceMeasures,includeGuidelines,includeEvidence)>
+<!ATTLIST evidencesType
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopeStatement EMPTY>
+<!ATTLIST scopeStatement
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT status (#PCDATA)>
+<!ATTLIST status
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT notes (#PCDATA)>
+<!ATTLIST notes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT updateFlag (#PCDATA)>
+<!ATTLIST updateFlag
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT groups (group)+>
+<!ATTLIST groups
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT filters (filter)+>
+<!ATTLIST filters
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT includeOutcomes (#PCDATA)>
+<!ATTLIST includeOutcomes
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT includePerformanceMeasures (#PCDATA)>
+<!ATTLIST includePerformanceMeasures
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT includeGuidelines (#PCDATA)>
+<!ATTLIST includeGuidelines
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT includeEvidence (#PCDATA)>
+<!ATTLIST includeEvidence
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT group (scopedInterventions,groupTerm)>
+<!ATTLIST group
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT filter (values,target,type)>
+<!ATTLIST filter
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedInterventions (scopedIntervention)+>
+<!ATTLIST scopedInterventions
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT groupTerm (
+(id, dtsNamespaceId, name)|
+(id, name, dtsNamespaceId)|
+(dtsNamespaceId, id, name)|
+(dtsNamespaceId, name, id)|
+(name, id, dtsNamespaceId)|
+(name, dtsNamespaceId, id)
+)>
+<!ATTLIST groupTerm
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT values (value)>
+<!ATTLIST values
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT target (#PCDATA)>
+<!ATTLIST target
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT type (#PCDATA)>
+<!ATTLIST type
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scopedIntervention (id,version)>
+<!ATTLIST scopedIntervention
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT value (id,dtsNamespaceId,displayName)>
+<!ATTLIST value
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT version (version-id)>
+<!ATTLIST version
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT displayName (#PCDATA)>
+<!ATTLIST displayName
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT version-id (#PCDATA)>
+<!ATTLIST version-id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT dtsNamespaceId (#PCDATA)>
+<!ATTLIST dtsNamespaceId
+    xmlns CDATA #FIXED ''>

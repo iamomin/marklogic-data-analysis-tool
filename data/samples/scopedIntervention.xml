@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scopedIntervention>
+  <id>00e51fc0-c884-4f67-8f49-4273a0a16c9d</id>
+  <scopedInterventionName>Diuretic</scopedInterventionName>
+  <description>&lt;div&gt;&lt;/div&gt;</description>
+  <intervention>
+      <id>386183daca674e94808ed231e4e3246b</id>
+      <displayName>Loop/Thiazide Diuretic</displayName>
+      <dtsNamespaceId>60001</dtsNamespaceId>
+    </intervention>
+  <status>draft</status>
+  <careSettings>
+    <careSetting>
+      <id>125082649b5b41ceb60d8f34f484951f</id>
+      <dtsNamespaceId>60001</dtsNamespaceId>
+      <displayName>Outpatient</displayName>
+    </careSetting>
+  </careSettings>
+  <assessmentGuidance>&lt;div&gt;eg, bumetanide, ethacrynic acid, furosemide, torsemide&lt;/div&gt;&lt;div&gt;&lt;/div&gt;</assessmentGuidance>
+  <scoringGuidance>&lt;div&gt;None&lt;/div&gt;&lt;div&gt;&lt;/div&gt;</scoringGuidance>
+  <conditions>
+    <condition>
+      <id>f0276f29cb204a529fc46650827f8b9c</id>
+      <dtsNamespaceId>60001</dtsNamespaceId>
+      <displayName>Heart Failure (Condition)</displayName>
+    </condition>
+  </conditions>
+  <sexes>
+    <sex>
+      <id>ffffffffffffffffffffffffffffffff</id>
+      <displayName>Any</displayName>
+    </sex>
+  </sexes>
+  <ageGroups>
+    <ageGroup>
+      <id>ae56b45cb3aa418ba3eb88e1ad115873</id>
+      <dtsNamespaceId>60001</dtsNamespaceId>
+      <displayName>Adult</displayName>
+    </ageGroup>
+  </ageGroups>
+  <evidence>
+    <evidenceTopic>
+      <displayName>Loop Diuretics</displayName>
+      <pageId>217911</pageId>
+      <product>
+  <id>375ec220-d6d5-4fe8-a81f-d99769cc0307</id>
+  <displayName>ZynxAmbulatory</displayName>
+      </product>
+    </evidenceTopic>
+    <evidenceTopic>
+      <displayName>Thiazide Diuretics</displayName>
+      <pageId>217912</pageId>
+      <product>
+  <id>375ec220-d6d5-4fe8-a81f-d99769cc0307</id>
+  <displayName>ZynxAmbulatory</displayName>
+      </product>
+    </evidenceTopic>
+    <evidenceTopic>
+      <displayName>Forecaster</displayName>
+      <pageId>218125</pageId>
+      <product>
+  <id>3deaf5ab-ea74-4bdb-9442-db49ee4d8a61</id>
+  <displayName>Ambulatory Forecaster</displayName>
+      </product>
+    </evidenceTopic>
+  </evidence>
+  <customEvidence/>
+  <performanceMeasures/>
+  <guidelines>
+    <guideline>
+      <guidelineName>Heart Failure Society of America</guidelineName>
+      <id>61ae1319-5dc9-4223-858e-4fa28f76d182</id>
+      <title>HFSA 2010 Comprehensive Heart Failure Practice Guideline.</title>
+      <publishYear>2010</publishYear>
+      <legacyId>871749</legacyId>
+    </guideline>
+    <guideline>
+      <guidelineName>American College of Cardiology Foundation/American Heart Association</guidelineName>
+      <id>3901e7e7-8c99-4630-8d19-beae7ca600c5</id>
+      <title>2013 ACCF/AHA Guideline for the Management of Heart Failure: A Report of the American
+            College of Cardiology Foundation/American Heart Association Task Force on Practice
+            Guidelines.
+         </title>
+      <publishYear>2013</publishYear>
+      <legacyId>1404687</legacyId>
+    </guideline>
+  </guidelines>
+  <outcomes>
+    <outcomeContainer>
+      <outcome>
+  <id>f01246c60c0a4c56be076e8a5b265db3</id>
+  <dtsNamespaceId>60001</dtsNamespaceId>
+  <displayName>Admission (Outcome)</displayName>
+      </outcome>
+      <impact>positive</impact>
+      <impactThresholds>
+  <impactThreshold>
+    <value>7</value>
+    <description>Worsening Heart Failure Admission</description>
+    <referenceId>46644</referenceId>
+    <pubMedId>22336795</pubMedId>
+  </impactThreshold>
+      </impactThresholds>
+    </outcomeContainer>
+    <outcomeContainer>
+      <outcome>
+  <id>d84e2f5898c34da885b12cd903b71e5e</id>
+  <dtsNamespaceId>60001</dtsNamespaceId>
+  <displayName>Mortality (Outcome)</displayName>
+      </outcome>
+      <impact>positive</impact>
+      <impactThresholds>
+  <impactThreshold>
+    <value>12</value>
+    <description>Mortality</description>
+    <referenceId>46644</referenceId>
+    <pubMedId>22336795</pubMedId>
+  </impactThreshold>
+      </impactThresholds>
+    </outcomeContainer>
+  </outcomes>
+  <section>
+    <id>bb29e60717ed4d80baea82aaa9e1dbee</id>
+    <dtsNamespaceId>60001</dtsNamespaceId>
+    <displayName>Medications</displayName>
+  </section>
+  <clinicalCategories>
+    <clinicalCategory>
+      <id>f84777bd34a2495e9101363d0276921a</id>
+      <dtsNamespaceId>60001</dtsNamespaceId>
+      <displayName>Medication</displayName>
+    </clinicalCategory>
+  </clinicalCategories>
+  <hasForecasters>true</hasForecasters>
+  <isScoreable>true</isScoreable>
+  <subpopulationCollection/>
+  <collaborationNotes>&lt;div&gt;add pgl 1404687&lt;/div&gt;&lt;div&gt;6/14/13 NNC: removed ref ID 18,774; removed cost&lt;/div&gt;&lt;div&gt;4/16/13 Added guideline Ref IDs; no other changes to SI.&lt;/div&gt;</collaborationNotes>
+  <inpatientVenues/>
+  <outpatientVenues/>
+  <stakeholders/>
+  <formats>
+    <format>
+      <id>c81890b5f6cf46039d77822ae0dd25dc</id>
+      <dtsNamespaceId>60001</dtsNamespaceId>
+      <displayName>Order Set</displayName>
+    </format>
+  </formats>
+  <channels/>
+  <patientProblems/>
+  <inactive>false</inactive>
+  <clientMatchingInstructions>&lt;div&gt;&lt;/div&gt;</clientMatchingInstructions>
+  <shouldShowInAnalysis>true</shouldShowInAnalysis>
+  <inclusionCriteria>&lt;div&gt;&lt;/div&gt;</inclusionCriteria>
+  <exclusionCriteria>&lt;div&gt;&lt;/div&gt;</exclusionCriteria>
+  <scopedInterventionTypes>
+    <scopedInterventionType>
+      <id>ffffffffffffffffffffffffffffffff</id>
+      <displayName>Any</displayName>
+    </scopedInterventionType>
+  </scopedInterventionTypes>
+  <interventionAction>
+    <id>7847de84c99c11e3bacc180373e4622c</id>
+    <displayName>Perform</displayName>
+    <dtsNamespaceId>60001</dtsNamespaceId>
+  </interventionAction>
+  <matchingCategory>
+    <id>c5edee0ec99b11e388ad180373e4622c</id>
+    <displayName>Order Set</displayName>
+    <dtsNamespaceId>60001</dtsNamespaceId>
+  </matchingCategory>
+</scopedIntervention>
